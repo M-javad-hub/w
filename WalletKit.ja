@@ -1,0 +1,19 @@
+
+import { Core } from '@walletconnect/core'
+import { WalletKit } from '@reown/walletkit'
+
+const core = new Core({
+  projectId: '46f40dcfd9315435ef1501fd13a52f01'
+})
+
+const metadata = {
+  name: 'Dex',
+  description: 'AppKit Example',
+  url: 'https://reown.com/appkit', // origin must match your domain & subdomain
+  icons: ['https://assets.reown.com/reown-profile-pic.png']
+}
+
+const walletKit = await WalletKit.init({
+  core, // <- pass the shared 'core' instance
+  metadata
+})
